@@ -20,6 +20,9 @@ Please cite following paper if these codes help your research:
     
 #  Coming Soon ...
 
+## [Compacting, Picking and Growing (CPG)](https://github.com/ivclab/CPG)
+We modify and enhance our PAE to become the CPG, which is published in NeurIPS, 2019.
+
 ## Contact
 Please feel free to leave suggestions or comments to [Steven C. Y. Hung](https://github.com/fevemania),[Jia-Hong Lee](https://github.com/Jia-HongHenryLee),[Timmy S. T. Wan](https://github.com/bigchou),[Chein-Hung Chen](https://github.com/Chien-Hung),[Yi-Ming Chan](https://github.com/yimingchan),[Chu-Song Chen](song@iis.sinica.edu.tw)
 
