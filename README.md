@@ -17,6 +17,30 @@ Please cite following paper if these codes help your research:
         year={2019},
         organization={ACM}
     }
+
+## Prerequisition
+- Python 3
+- [TensorFlow](https://www.tensorflow.org/install/install_linux)
+```bash
+$ sudo apt update
+$ sudo apt install python3-dev python3-pip
+$ sudo pip3 install -U virtualenv
+$ virtualenv --system-site-packages -p python3 ./tfvenv
+$ source ./tfvenv/bin/activate
+$ pip install tensorflow-gpu==1.15
+```
+- other python's library
+```bash
+$ pip install -r requirement.txt
+```
+
+## Usage
+Clone the PAE repository:
+```bash
+$ git clone --recursive https://github.com/ivclab/PAE.git
+```
+### Experiment One
+
     
 #  Coming Soon ...
 
