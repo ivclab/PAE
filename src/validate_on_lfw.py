@@ -47,7 +47,7 @@ import pdb
 from pprint import pprint
 from tensorflow.python import debug as tf_debug
 from PIL import Image
-import models.debug_inception_resnet_v1 as network
+import models.inception_resnet_v1 as network
 import tensorflow.contrib.slim as slim
 import time
 import json
