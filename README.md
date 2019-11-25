@@ -44,6 +44,8 @@ $ git clone --recursive https://github.com/ivclab/PAE.git
 ```bash
 $ 
 ```
+
+4. The accuracy and model size of our PAENet about experiment one in [accresult/experiment1]()
     
 #  Coming Soon ...
 
