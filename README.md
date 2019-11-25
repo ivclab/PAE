@@ -39,13 +39,17 @@ Clone the PAE repository:
 ```bash
 $ git clone --recursive https://github.com/ivclab/PAE.git
 ```
-### Experiment One
+### Experiment One (Face Verification, Gender and Age Modules)
 1. Download Vggface2(image size is 182x182), LFW(image size is 160x160) and Adience datasets which have been aligned by [MTCNN](https://github.com/ivclab/PAE/tree/master/src/align)
 ```bash
 $ 
 ```
 
 4. The accuracy and model size of our PAENet in experiment one in [accresult/experiment1](https://github.com/ivclab/PAE/tree/master/accresult/experiment1) and [accresult/facenet](https://github.com/ivclab/PAE/tree/master/accresult/facenet)
+
+### Experiment Two (Face Verification, Gender and Expression)
+
+4. The accuracy and model size of our PAENet in experiment two in [accresult/experiment2](https://github.com/ivclab/PAE/tree/master/accresult/experiment2) and [accresult/facenet](https://github.com/ivclab/PAE/tree/master/accresult/facenet)
     
 #  Coming Soon ...
 
