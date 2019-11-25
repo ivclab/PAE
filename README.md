@@ -40,7 +40,7 @@ Clone the PAE repository:
 $ git clone --recursive https://github.com/ivclab/PAE.git
 ```
 ### Experiment One
-1. Download Vggface2, LFW and adience datasets which have been aligned by [MTCNN](https://github.com/ivclab/PAE/tree/master/src/align)
+1. Download Vggface2(image size is 182x182), LFW(image size is 160x160) and Adience datasets which have been aligned by [MTCNN](https://github.com/ivclab/PAE/tree/master/src/align)
 ```bash
 $ 
 ```
