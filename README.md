@@ -45,7 +45,7 @@ $ git clone --recursive https://github.com/ivclab/PAE.git
 $ 
 ```
 
-2. Download PAENet models in all experiment
+2. Download all epoches of PAENet models and baseline models in all experiment (The file size of official_checkpoint.zip is 78 GB)
 ```bash
 $ 
 ```
