@@ -45,6 +45,11 @@ $ git clone --recursive https://github.com/ivclab/PAE.git
 $ 
 ```
 
+2. Download PAENet models in all experiment
+```bash
+$ 
+```
+
 4. The accuracy and model size of our PAENet in experiment one in [accresult/experiment1](https://github.com/ivclab/PAE/tree/master/accresult/experiment1) and [accresult/facenet](https://github.com/ivclab/PAE/tree/master/accresult/facenet)
 
 ### Experiment Two (Face Verification, Gender and Expression)
