@@ -22,12 +22,14 @@ Please cite following paper if these codes help your research:
 - Ubuntu
 - Python 3
 - Cuda-9.0 ([Google drive](https://drive.google.com/file/d/1eu3Pstdyhs3cg-brHrsPMgx_LMFoplSs/view?usp=sharing))
+
 (1) If the operation system of your computer is Ubuntu 18.04, you need to follow the command to downgrade your complier:
 ```bash
 $ sudo apt install gcc-6 g++-6
 $ sudo ln -s /usr/bin/gcc-6 /usr/local/bin/gcc
 $ sudo ln -s /usr/bin/g++-6 /usr/local/bin/g++
 ```
+
 (2) Set the environmental variable of Cuda 9.0:
 ```bash
 $ vi ~/.bashrc
