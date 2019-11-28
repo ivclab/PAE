@@ -3,10 +3,10 @@
 # bash src/inference_first_task.sh
 
 GPU_ID=0
-MODEL_FOLDER_NAME="facenet/0"
+MODEL_FOLDER_NAME="experiment1/facenet/0"
 
 CUDA_VISIBLE_DEVICES=$GPU_ID python src/validate_on_lfw.py \
---lfw_dir '~/fevemania/datasets/lfw_mtcnnpy_160' \
+--lfw_dir 'data/lfw_mtcnnpy_160' \
 --lfw_pairs 'data/pairs.txt' \
 --model 'official_checkpoint/'$MODEL_FOLDER_NAME \
 --use_fixed_image_standardization \
@@ -17,4 +17,5 @@ CUDA_VISIBLE_DEVICES=$GPU_ID python src/validate_on_lfw.py \
 --subtract_mean \
 --eval_once \
 --print_mem \
---print_mask_info 
+--print_mask_info \
+--csv_file_path 'accresult/experiment1/PAENet_face.csv'
