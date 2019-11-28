@@ -81,7 +81,7 @@ $ python download_official_checkpoint.py
 ```
 
 3. Inference the PAENet model
-- inference the face task of PAENet model and its accuracy and model size stored in [accresult/experiment1/PAENet_face.csv](). The accuracy and model size of baseline facenet stored in [accresult/baseline/experiment1/FaceNet.csv]()
+- inference the face task of PAENet model and its accuracy and model size stored in [accresult/experiment1/PAENet_face](). The accuracy and model size of baseline facenet stored in [accresult/baseline/experiment1/FaceNet]()
 ```bash
 $ bash src/inference_first_task.sh
 ```
