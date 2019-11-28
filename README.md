@@ -81,11 +81,11 @@ $ python download_official_checkpoint.py
 ```
 
 3. Inference the PAENet model
-- inference the face task of PAENet model and its accuracy and model size stored in [accresult/experiment1/PAENet_face](https://github.com/ivclab/PAE/blob/master/accresult/experiment1/PAENet_face.csv). The accuracy and model size of baseline facenet stored in [accresult/baseline/experiment1/FaceNet](https://github.com/ivclab/PAE/blob/master/accresult/baseline/experiment1/FaceNet.csv)
+- inference the face task of PAENet model and its accuracy and model size stored in [accresult/experiment1/PAENet_face](https://github.com/ivclab/PAE/blob/master/accresult/experiment1/PAENet_face.csv). The accuracy and model size of baseline FaceNet stored in [accresult/baseline/experiment1/FaceNet](https://github.com/ivclab/PAE/blob/master/accresult/baseline/experiment1/FaceNet.csv)
 ```bash
 $ bash src/inference_first_task.sh
 ```
-- inference the age and gender tasks of PAENet model
+- inference the age and gender tasks of PAENet model, their accuracy and model size stored in [accresult/experiment1/age]() and [accresult/experiment1/gender](). The accuracy and model size of baseline AgeNet stored in [accresult/baseline/experiment1/AgeNet](). 
 
 4. The accuracy and model size of our PAENet in experiment one in [accresult/experiment1](https://github.com/ivclab/PAE/tree/master/accresult/experiment1) and [accresult/facenet](https://github.com/ivclab/PAE/tree/master/accresult/facenet)
 
