@@ -85,7 +85,7 @@ $ python download_official_checkpoint.py
 ```bash
 $ bash src/inference_first_task.sh
 ```
-- inference the age and gender tasks of PAENet model, their accuracy and model size stored in [accresult/experiment1/age]() and [accresult/experiment1/gender](). The accuracy and model size of baseline AgeNet stored in [accresult/baseline/experiment1/AgeNet](). 
+- inference the age and gender tasks of PAENet model, their accuracy and model size stored in [accresult/experiment1/age]() and [accresult/experiment1/gender](). The accuracy and model size of baseline AgeNet stored in [accresult/baseline/experiment1/AgeNet](https://github.com/ivclab/PAE/tree/master/accresult/baseline/experiment1/AgeNet).
 
 4. The accuracy and model size of our PAENet in experiment one in [accresult/experiment1](https://github.com/ivclab/PAE/tree/master/accresult/experiment1) and [accresult/facenet](https://github.com/ivclab/PAE/tree/master/accresult/facenet)
 
