@@ -36,9 +36,9 @@ def save_response_content(response, destination):
 
 if __name__ == "__main__":
 
-	print ('Download official checkpoint ... ')
-	file_id = '1qTQBvvCduzEI6tMpnhopBBgB61kMCoZg'
-	destination = 'official_checkpoint.zip'
+	print ('Download Aligned Adience Gender Dataset... ')
+	file_id = '1JMwfhfCdR4wwXvumkXY180wu0GU40ajR'
+	destination = 'Adience_gender_182.zip'
 	download_file_from_google_drive(file_id, destination)
 	with zipfile.ZipFile(destination) as zf:
 		zip_dir = zf.namelist()[0]

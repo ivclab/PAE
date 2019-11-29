@@ -73,21 +73,24 @@ $ git clone --recursive https://github.com/ivclab/PAE.git
 ```bash
 $ cd data
 $ python download_aligned_LFW.py
+$ python download_aligned_Adienceage.py
+$ python download_aligned_Adiencegender.py
 ```
 
-2. Download all epoches of PAENet models and baseline models in all experiment (The file size of official_checkpoint.zip is 78 GB)
+2. Download all epoches of PAENet models and baseline models in all experiment (The file size of official_checkpoint.zip is 79 GB)
 ```bash
 $ python download_official_checkpoint.py
 ```
 
 3. Inference the PAENet model
-- inference the face task of PAENet model and its accuracy and model size stored in [accresult/experiment1/PAENet_face](https://github.com/ivclab/PAE/blob/master/accresult/experiment1/PAENet_face.csv). The accuracy and model size of baseline FaceNet stored in [accresult/baseline/experiment1/FaceNet](https://github.com/ivclab/PAE/blob/master/accresult/baseline/experiment1/FaceNet.csv)
+- inference the face task of PAENet model and its accuracy and model size stored in [accresult/experiment1/PAENet_face](https://github.com/ivclab/PAE/blob/master/accresult/experiment1/PAENet_face.csv). The accuracy and model size of baseline FaceNet stored in [accresult/baseline/experiment1/FaceNet](https://github.com/ivclab/PAE/blob/master/accresult/baseline/experiment1/FaceNet.csv).
 ```bash
 $ bash src/inference_first_task.sh
 ```
-- inference the age and gender tasks of PAENet model, their accuracy and model size stored in [accresult/experiment1/age]() and [accresult/experiment1/gender](). The accuracy and model size of baseline AgeNet stored in [accresult/baseline/experiment1/AgeNet](https://github.com/ivclab/PAE/tree/master/accresult/baseline/experiment1/AgeNet).
-
-4. The accuracy and model size of our PAENet in experiment one in [accresult/experiment1](https://github.com/ivclab/PAE/tree/master/accresult/experiment1) and [accresult/facenet](https://github.com/ivclab/PAE/tree/master/accresult/facenet)
+- inference the age and gender tasks of PAENet model, their accuracy and model size stored in [accresult/experiment1/age]() and [accresult/experiment1/gender](). The accuracy and model size of baseline AgeNet stored in [accresult/baseline/experiment1/AgeNet](https://github.com/ivclab/PAE/tree/master/accresult/baseline/experiment1/AgeNet). The accuracy and model size of baseline GenderNet stored in [accresult/baseline/experiment1/GenderNet](https://github.com/ivclab/PAE/tree/master/accresult/baseline/experiment1/GenderNet).
+```bash
+$ bash src/inference_experiment1_task.sh
+```
 
 ### Experiment Two (Face Verification, Gender and Expression)
 

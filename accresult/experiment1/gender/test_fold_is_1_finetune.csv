@@ -1,2 +1,0 @@
-Pruned rate,Acc,Epoch No.,Model size through inference (MB) (Shared part + task-specific part),Shared part (MB),Task specific part (MB),Whole masks (MB),Task specific masks (MB),Task specific batch norm vars (MB),Task specific biases (MB)
-0.00000,0.88517,18,111.987,111.733,111.987,22.347,22.347,0.169,0.080
