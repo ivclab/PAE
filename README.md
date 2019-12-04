@@ -98,7 +98,7 @@ $ bash src/inference_experiment1_task.sh
 ```bash
 $ bash src/first_task_script.sh
 ```
-- Train the second and third tasks (age and gender classification) from previous model with the weights of first task. The new PAENet models will be stored in pae_checkpoint directory and its result will be stored in csv directory.
+- Train the second and third tasks (age and gender classification) from previous model with the weights of previous task. The new PAENet models will be stored in pae_checkpoint directory and its result will be stored in csv directory.
 ```bash
 $ bash src/experiment1_PAE.sh
 ```
