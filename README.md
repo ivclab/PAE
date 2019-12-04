@@ -127,9 +127,7 @@ $ bash src/first_task_script.sh
 ```
 - Train the second task (Expression classification) from previous model with the weights of first task. The new PAENet models will be stored in pae_checkpoint directory and its result will be stored in csv directory.
 
-- Train the third task (Gender classification) from previous model with the weights of first and second tasks. The new PAENet models will be stored in pae_checkpoint directory and its result will be stored in csv directory. 
-
-4. The accuracy and model size of our PAENet in experiment two in [accresult/experiment2](https://github.com/ivclab/PAE/tree/master/accresult/experiment2) and [accresult/facenet](https://github.com/ivclab/PAE/tree/master/accresult/facenet)
+- Train the third task (Gender classification) from previous model with the weights of first and second tasks. The new PAENet models will be stored in pae_checkpoint directory and its result will be stored in csv directory.
 
 ## [Compacting, Picking and Growing (CPG)](https://github.com/ivclab/CPG)
 We enhance our PAE to become the CPG, which is published in NeurIPS, 2019.
