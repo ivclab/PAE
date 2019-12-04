@@ -69,12 +69,13 @@ $ git clone --recursive https://github.com/ivclab/PAE.git
 ```
 
 ### Experiment One (Face Verification, Gender and Age Modules)
-1. Download Vggface2(image size is 182x182), LFW(image size is 160x160) and Adience datasets(image size is 182x182) which have been aligned by [MTCNN](https://github.com/ivclab/PAE/tree/master/src/align)
+1. Download Vggface2(image size is 182x182 and its file size is 148 GB), LFW(image size is 160x160) and Adience(image size is 182x182) datasets which have been aligned by [MTCNN](https://github.com/ivclab/PAE/tree/master/src/align)
 ```bash
 $ cd data
 $ python download_aligned_LFW.py
 $ python download_aligned_Adienceage.py
 $ python download_aligned_Adiencegender.py
+$ python download_aligned_vggface2.py
 ```
 
 2. Download all epoches of PAENet models and baseline models in all experiment (The file size of official_checkpoint.zip is 79 GB)
@@ -92,11 +93,43 @@ $ bash src/inference_first_task.sh
 $ bash src/inference_experiment1_task.sh
 ```
 
-### Experiment Two (Face Verification, Gender and Expression)
+4. The training strategy of Packing and Expanding. And also training baseline models.
+- Train the first task (face verificaion) using pretrained model from (FaceNet)[https://github.com/davidsandberg/facenet]. The new PAENet models will be stored in pae_checkpoint directory and its result wiil be stored in csv directory.
+```bash
+$ bash src/first_task_script.sh
+```
+- Train the second and third tasks (age and gender classification) from previous model with the weights of first task. The new PAENet models will be stored in pae_checkpoint directory and its result will be stored in csv directory.
+```bash
+$ bash src/experiment1_PAE.sh
+```
+
+### Experiment Two (Face Verification, Expression and Gender)
+1. Download Vggface2(image size is 182x182 and its file size is 148 GB), LFW(image size is 160x160), FotW(), IMDb-Wiki() and AffectNet() datasets which have been aligned by [MTCNN](https://github.com/ivclab/PAE/tree/master/src/align)
+```bash
+$ cd data
+$ python download_aligned_LFW.py
+$ python download_aligned_vggface2.py
+```
+
+2. Download all epoches of PAENet models and baseline models in all experiment (The file size of official_checkpoint.zip is 79 GB)
+```bash
+$ python download_official_checkpoint.py
+```
+
+3. Inference the PAENet model
+- inference the face task of PAENet model and its accuracy and model size stored in [accresult/experiment2/PAENet_face](https://github.com/ivclab/PAE/blob/master/accresult/experiment2/PAENet_face.csv). The accuracy and model size of baseline FaceNet stored in [accresult/baseline/experiment2/FaceNet](https://github.com/ivclab/PAE/blob/master/accresult/baseline/experiment2/FaceNet.csv).
+
+
+4. The training strategy of Packing and Expanding
+- Train the first task (face verificaion) using pretrained model from (FaceNet)[https://github.com/davidsandberg/facenet]. The new PAENet models will be stored in pae_checkpoint directory and its result wiil be stored in csv directory.
+```bash
+$ bash src/first_task_script.sh
+```
+- Train the second task (Expression classification) from previous model with the weights of first task. The new PAENet models will be stored in pae_checkpoint directory and its result will be stored in csv directory.
+
+- Train the third task (Gender classification) from previous model with the weights of first and second tasks. The new PAENet models will be stored in pae_checkpoint directory and its result will be stored in csv directory. 
 
 4. The accuracy and model size of our PAENet in experiment two in [accresult/experiment2](https://github.com/ivclab/PAE/tree/master/accresult/experiment2) and [accresult/facenet](https://github.com/ivclab/PAE/tree/master/accresult/facenet)
-    
-#  Coming Soon ...
 
 ## [Compacting, Picking and Growing (CPG)](https://github.com/ivclab/CPG)
 We enhance our PAE to become the CPG, which is published in NeurIPS, 2019.

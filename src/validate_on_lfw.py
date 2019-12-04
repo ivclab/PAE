@@ -136,7 +136,7 @@ def main(_):
                   data = json.load(json_file)
                   max_acc = max(data, key=float)
                   epoch_no = data[max_acc]
-                  ckpt_file = args.model + '/model.ckpt-' + epoch_no
+                  ckpt_file = args.model + '/model-.ckpt-' + epoch_no
 
                 with open(checkpoint_file) as f:
                   context = f.read()

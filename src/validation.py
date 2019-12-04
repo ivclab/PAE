@@ -73,7 +73,7 @@ def main(_):
 
     if FLAGS.csv_file_path:
       if os.path.exists(FLAGS.csv_file_path) is False:
-        csv_dir = FLAGS.csv_file_path.rsplit('/', 1)[0]
+        csv_dir = FLAGS.csv_file_path.rsplit('/', 1)[0]        
         if os.path.exists(csv_dir) is False:
           os.makedirs(csv_dir)
 

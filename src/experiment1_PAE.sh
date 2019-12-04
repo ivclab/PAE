@@ -5,7 +5,7 @@ nrof_epoch_to_run=4
 start_sparsity_list=(0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8)
 end_sparsity_list=(0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9)
 
-GPU_ID=2
+GPU_ID=0
 dataset=("age/test_fold_is_0" "gender/test_fold_is_0" "age/test_fold_is_1" "gender/test_fold_is_1" "age/test_fold_is_2" "gender/test_fold_is_2" "age/test_fold_is_3" "gender/test_fold_is_3" "age/test_fold_is_4" "gender/test_fold_is_4")
 PREVIOUS_MODEL_FOLDER_NAME=("facenet/0" "experiment1/age/test_fold_is_0" "facenet/0" "experiment1/age/test_fold_is_1" "facenet/0" "experiment1/age/test_fold_is_2" "facenet/0" "experiment1/age/test_fold_is_3" "facenet/0" "experiment1/age/test_fold_is_4")
 MODEL_FOLDER_NAME=("experiment1/age/test_fold_is_0" "experiment1/gender/test_fold_is_0" "experiment1/age/test_fold_is_1" "experiment1/gender/test_fold_is_1" "experiment1/age/test_fold_is_2" "experiment1/gender/test_fold_is_2" "experiment1/age/test_fold_is_3" "experiment1/gender/test_fold_is_3" "experiment1/age/test_fold_is_4" "experiment1/gender/test_fold_is_4")
@@ -20,8 +20,8 @@ do
 
   CUDA_VISIBLE_DEVICES=$GPU_ID python src/train_softmax.py \
   --logs_base_dir 'logs/'${MODEL_FOLDER_NAME[idx]} \
-  --models_base_dir 'official_checkpoint/'${MODEL_FOLDER_NAME[idx]} \
-  --data_dir '/home/ivclab/fevemania/datasets/'${dataset[idx]} \
+  --models_base_dir 'pae_checkpoint/'${MODEL_FOLDER_NAME[idx]} \
+  --data_dir 'data/'${dataset[idx]} \
   --image_size 160 \
   --model_def models.inception_resnet_v1 \
   --optimizer ADAM \
@@ -41,8 +41,8 @@ do
   # Finetune new task
   CUDA_VISIBLE_DEVICES=$GPU_ID python src/train_softmax.py \
   --logs_base_dir 'logs/'${MODEL_FOLDER_NAME[idx]} \
-  --models_base_dir 'official_checkpoint/'${MODEL_FOLDER_NAME[idx]} \
-  --data_dir '/home/ivclab/fevemania/datasets/'${dataset[idx]} \
+  --models_base_dir 'pae_checkpoint/'${MODEL_FOLDER_NAME[idx]} \
+  --data_dir 'data/'${dataset[idx]} \
   --image_size 160 \
   --model_def models.inception_resnet_v1 \
   --optimizer ADAM \
@@ -61,8 +61,8 @@ do
   --max_to_keep 1    
 
   CUDA_VISIBLE_DEVICES=$GPU_ID python src/validation.py \
-  --data_dir '~/fevemania/datasets/'${dataset[idx]} \
-  --model 'official_checkpoint/'${MODEL_FOLDER_NAME[idx]} \
+  --data_dir 'data/'${dataset[idx]} \
+  --model 'pae_checkpoint/'${MODEL_FOLDER_NAME[idx]} \
   --use_fixed_image_standardization \
   --task_name ${dataset[idx]} \
   --task_id ${TASK_ID[idx]} \
@@ -75,8 +75,8 @@ do
      
     CUDA_VISIBLE_DEVICES=$GPU_ID python src/train_softmax.py \
     --logs_base_dir 'logs/'${MODEL_FOLDER_NAME[idx]} \
-    --models_base_dir 'official_checkpoint/'${MODEL_FOLDER_NAME[idx]} \
-    --data_dir '/home/ivclab/fevemania/datasets/'${dataset[idx]} \
+    --models_base_dir 'pae_checkpoint/'${MODEL_FOLDER_NAME[idx]} \
+    --data_dir 'data/'${dataset[idx]} \
     --image_size 160 \
     --model_def models.inception_resnet_v1 \
     --optimizer ADAM \
@@ -99,8 +99,8 @@ do
     --pruning_hparams name=pruning,initial_sparsity=${start_sparsity_list[RUN_ID]},target_sparsity=${end_sparsity_list[RUN_ID]},pruning_frequency=10
 
     CUDA_VISIBLE_DEVICES=$GPU_ID python src/validation.py \
-    --data_dir '~/fevemania/datasets/'${dataset[idx]} \
-    --model 'official_checkpoint/'${MODEL_FOLDER_NAME[idx]} \
+    --data_dir 'data/'${dataset[idx]} \
+    --model 'pae_checkpoint/'${MODEL_FOLDER_NAME[idx]} \
     --use_fixed_image_standardization \
     --task_name ${dataset[idx]} \
     --task_id ${TASK_ID[idx]} \
