@@ -94,7 +94,7 @@ $ bash src/inference_experiment1_task.sh
 ```
 
 4. The training strategy of Packing and Expanding. And also training baseline models.
-- Train the first task (face verificaion) using pretrained model from (FaceNet)[https://github.com/davidsandberg/facenet]. The new PAENet models will be stored in pae_checkpoint directory and its result wiil be stored in csv directory.
+- Train the first task (face verificaion) using pretrained model from [FaceNet](https://github.com/davidsandberg/facenet). The new PAENet models will be stored in pae_checkpoint directory and its result wiil be stored in csv directory.
 ```bash
 $ bash src/first_task_script.sh
 ```
@@ -121,7 +121,7 @@ $ python download_official_checkpoint.py
 
 
 4. The training strategy of Packing and Expanding
-- Train the first task (face verificaion) using pretrained model from (FaceNet)[https://github.com/davidsandberg/facenet]. The new PAENet models will be stored in pae_checkpoint directory and its result wiil be stored in csv directory.
+- Train the first task (face verificaion) using pretrained model from [FaceNet](https://github.com/davidsandberg/facenet). The new PAENet models will be stored in pae_checkpoint directory and its result wiil be stored in csv directory.
 ```bash
 $ bash src/first_task_script.sh
 ```
