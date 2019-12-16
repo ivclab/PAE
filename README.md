@@ -1,5 +1,5 @@
 # Packing and Expanding (PAE)
-official implementation of [Increasingly Packing Multiple Facial-Informatics Modules in A Unified Deep-Learning Model via Lifelong Learning](https://dl.acm.org/citation.cfm?id=3325053)
+official implementation of [Increasingly Packing Multiple Facial-Informatics Modules in A Unified Deep-Learning Model via Lifelong Learning](https://dl.acm.org/citation.cfm?id=3325053)([Poster](https://github.com/ivclab/PAE/blob/master/docs/2019ICMR_Poster.pdf))
 
 Created by [Steven C. Y. Hung](https://github.com/fevemania), [Jia-Hong Lee](https://github.com/Jia-HongHenryLee), [Timmy S. T. Wan](https://github.com/bigchou), [Chein-Hung Chen](https://github.com/Chien-Hung), [Yi-Ming Chan](https://github.com/yimingchan), Chu-Song Chen
 
