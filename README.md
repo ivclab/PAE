@@ -123,6 +123,10 @@ $ python download_official_checkpoint.py
 ```bash
 $ bash src/inference_first_task_ex2.sh
 ```
+- inference the expression and gender tasks of PAENet model, their accuracy and model size stored in [accresult/experiment2/emotion.csv](https://github.com/ivclab/PAE/tree/master/accresult/experiment2/emotion.csv) and [accresult/experiment2/chalearn/gender.csv](https://github.com/ivclab/PAE/tree/master/accresult/experiment2/chalearn/gender.csv). The accuracy and model size of baseline EmotionNet stored in [accresult/baseline/experiment2/EmotionNet.csv](https://github.com/ivclab/PAE/tree/master/accresult/baseline/experiment2/EmotionNet.csv). The accuracy and model size of baseline GenderNet stored in [accresult/baseline/experiment2/GenderNet.csv](https://github.com/ivclab/PAE/tree/master/accresult/baseline/experiment2/GenderNet.csv).
+```bash
+$ bash src/inference_experiment2_task.sh
+```
 
 4. The training strategy of Packing and Expanding. Also, training baseline models.
 - Train the first task (face verificaion) using pretrained model from [FaceNet](https://github.com/davidsandberg/facenet). The new PAENet models will be stored in pae_checkpoint directory and its result wiil be stored in csv directory.
