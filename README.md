@@ -137,7 +137,7 @@ $ bash src/first_task_script.sh
 ```bash
 $ bash src/experiment2_PAE.sh
 ```
-- If the value of Pruned rate is nan in the new task's csv file, it means that you need to expand the network to enhance the space of network for new task.
+- If the value of Pruned rate is nan in the new task's csv file, it means that you need to expand the network to increase the space of network for new task.
 ```bash
 # add_new_task_script.sh <GPU_ID> <TASK_NAME> <TASK_ID> <MODEL_FOLDER_NAME> <pretrained_model>
 # <GPU_ID>: which GPU you want to use.
