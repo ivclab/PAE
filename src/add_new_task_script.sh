@@ -21,8 +21,8 @@ pretrained_model=$5
 
 CUDA_VISIBLE_DEVICES=$GPU_ID python src/train_softmax.py \
 --logs_base_dir 'logs/'$MODEL_FOLDER_NAME \
---models_base_dir 'official_checkpoint/'$MODEL_FOLDER_NAME \
---data_dir '/home/ivclab/fevemania/datasets/'$TASK_NAME \
+--models_base_dir 'pae_checkpoint/'$MODEL_FOLDER_NAME \
+--data_dir 'data/'$TASK_NAME \
 --image_size 160 \
 --model_def models.inception_resnet_v1 \
 --optimizer ADAM \
@@ -46,8 +46,8 @@ CUDA_VISIBLE_DEVICES=$GPU_ID python src/train_softmax.py \
 
 CUDA_VISIBLE_DEVICES=$GPU_ID python src/train_softmax.py \
 --logs_base_dir 'logs/'$MODEL_FOLDER_NAME \
---models_base_dir 'official_checkpoint/'$MODEL_FOLDER_NAME \
---data_dir '/home/ivclab/fevemania/datasets/'$TASK_NAME \
+--models_base_dir 'pae_checkpoint/'$MODEL_FOLDER_NAME \
+--data_dir 'data/'$TASK_NAME \
 --image_size 160 \
 --model_def models.inception_resnet_v1 \
 --optimizer ADAM \
@@ -70,8 +70,8 @@ CUDA_VISIBLE_DEVICES=$GPU_ID python src/train_softmax.py \
 
 # Before pruning, write unpruning status into csv file
 CUDA_VISIBLE_DEVICES=$GPU_ID python src/validation.py \
---data_dir '~/fevemania/datasets/'$TASK_NAME \
---model 'official_checkpoint/'$MODEL_FOLDER_NAME \
+--data_dir 'data/'$TASK_NAME \
+--model 'pae_checkpoint/'$MODEL_FOLDER_NAME \
 --use_fixed_image_standardization \
 --task_name $TASK_NAME \
 --task_id $TASK_ID \
@@ -87,8 +87,8 @@ for RUN_ID in `seq 0 $((NUM_RUNS-1))`; do
    
   CUDA_VISIBLE_DEVICES=$GPU_ID python src/train_softmax.py \
   --logs_base_dir 'logs/'$MODEL_FOLDER_NAME \
-  --models_base_dir 'official_checkpoint/'$MODEL_FOLDER_NAME \
-  --data_dir '/home/ivclab/fevemania/datasets/'$TASK_NAME \
+  --models_base_dir 'pae_checkpoint/'$MODEL_FOLDER_NAME \
+  --data_dir 'data/'$TASK_NAME \
   --image_size 160 \
   --model_def models.inception_resnet_v1 \
   --optimizer ADAM \
@@ -114,8 +114,8 @@ for RUN_ID in `seq 0 $((NUM_RUNS-1))`; do
   --history_filters_expand_ratios 1.0,1.2
 
   CUDA_VISIBLE_DEVICES=$GPU_ID python src/validation.py \
-  --data_dir '~/fevemania/datasets/'$TASK_NAME \
-  --model 'official_checkpoint/'$MODEL_FOLDER_NAME \
+  --data_dir 'data/'$TASK_NAME \
+  --model 'pae_checkpoint/'$MODEL_FOLDER_NAME \
   --use_fixed_image_standardization \
   --task_name $TASK_NAME \
   --task_id $TASK_ID \

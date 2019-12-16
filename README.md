@@ -93,7 +93,7 @@ $ bash src/inference_first_task.sh
 $ bash src/inference_experiment1_task.sh
 ```
 
-4. The training strategy of Packing and Expanding. And also training baseline models.
+4. The training strategy of Packing and Expanding. Also, training baseline models.
 - Train the first task (face verificaion) using pretrained model from [FaceNet](https://github.com/davidsandberg/facenet). The new PAENet models will be stored in pae_checkpoint directory and its result wiil be stored in csv directory.
 ```bash
 $ bash src/first_task_script.sh
@@ -104,11 +104,13 @@ $ bash src/experiment1_PAE.sh
 ```
 
 ### Experiment Two (Face Verification, Expression and Gender)
-1. Download Vggface2(image size is 182x182 and its file size is 148 GB), LFW(image size is 160x160), FotW(), IMDb-Wiki() and AffectNet() datasets which have been aligned by [MTCNN](https://github.com/ivclab/PAE/tree/master/src/align)
+1. Download Vggface2(image size is 182x182 and its file size is 148 GB), LFW(image size is 160x160), AffectNet(image size is 182x182) and FotW/Chalearn(its training data is mixed with IMDb-Wiki dataset and its image size is 182x182) datasets which have been aligned by [MTCNN](https://github.com/ivclab/PAE/tree/master/src/align)
 ```bash
 $ cd data
 $ python download_aligned_LFW.py
 $ python download_aligned_vggface2.py
+$ python download_aligned_chalearn.py
+$ python download_aligned_affectnet.py
 ```
 
 2. Download all epoches of PAENet models and baseline models in all experiment (The file size of official_checkpoint.zip is 79 GB)
@@ -118,16 +120,29 @@ $ python download_official_checkpoint.py
 
 3. Inference the PAENet model
 - inference the face task of PAENet model and its accuracy and model size stored in [accresult/experiment2/PAENet_face](https://github.com/ivclab/PAE/blob/master/accresult/experiment2/PAENet_face.csv). The accuracy and model size of baseline FaceNet stored in [accresult/baseline/experiment2/FaceNet](https://github.com/ivclab/PAE/blob/master/accresult/baseline/experiment2/FaceNet.csv).
+```bash
+$ bash src/inference_first_task_ex2.sh
+```
 
-
-4. The training strategy of Packing and Expanding
+4. The training strategy of Packing and Expanding. Also, training baseline models.
 - Train the first task (face verificaion) using pretrained model from [FaceNet](https://github.com/davidsandberg/facenet). The new PAENet models will be stored in pae_checkpoint directory and its result wiil be stored in csv directory.
 ```bash
 $ bash src/first_task_script.sh
 ```
-- Train the second task (Expression classification) from previous model with the weights of first task. The new PAENet models will be stored in pae_checkpoint directory and its result will be stored in csv directory.
-
-- Train the third task (Gender classification) from previous model with the weights of first and second tasks. The new PAENet models will be stored in pae_checkpoint directory and its result will be stored in csv directory.
+- Train the second and third tasks (Expression and Gender classification) from previous model with the weights of previous task. The new PAENet models will be stored in pae_checkpoint directory and its result will be stored in csv directory.
+```bash
+$ bash src/experiment2_PAE.sh
+```
+- If the value of Pruned rate is nan in the new task's csv file, it means that you need to expand the network to enhance the space of network for new task.
+```bash
+# add_new_task_script.sh <GPU_ID> <TASK_NAME> <TASK_ID> <MODEL_FOLDER_NAME> <pretrained_model>
+# <GPU_ID>: which GPU you want to use.
+# <TASK_NAME>: the new task's name. e.g. chalearn/gender
+# <TASK_ID>: the new task's id. e.g. 3
+# <MODEL_FOLDER_NAME>: the directory path which you want to store the new model.
+# <pretrained_model>: the directory path which the previous task's model are stored in. Please refer the csv file to select the best accuracy of the previous task's model.
+$ bash src/add_new_task_script.sh 0 chalearn/gender 3 experiment2/chalearn/gender/expand pae_checkpoint/experiment2/emotion/weighted_loss/model-.ckpt-86
+```
 
 ## [Compacting, Picking and Growing (CPG)](https://github.com/ivclab/CPG)
 We enhance our PAE to become the CPG, which is published in NeurIPS, 2019.

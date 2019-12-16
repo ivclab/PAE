@@ -1,0 +1,2 @@
+Pruned rate,Acc,Epoch No.,Task specific part (MB),Task specific masks (MB),Task specific batch norm vars (MB),Task specific biases (MB)
+0,0.65235,52,26.145,5.176,0.169,0.08
