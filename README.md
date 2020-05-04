@@ -155,5 +155,5 @@ We enhance our PAE to become the CPG, which is published in NeurIPS, 2019.
 - [FaceNet](https://github.com/davidsandberg/facenet)
 
 ## Contact
-Please feel free to leave suggestions or comments to [Steven C. Y. Hung](https://github.com/fevemania), [Jia-Hong Lee](https://github.com/Jia-HongHenryLee)(honghenry.lee@gmail.com), [Timmy S. T. Wan](https://github.com/bigchou), [Chein-Hung Chen](https://github.com/Chien-Hung), [Yi-Ming Chan](https://github.com/yimingchan), Chu-Song Chen(song@iis.sinica.edu.tw)
+Please feel free to leave suggestions or comments to [Steven C. Y. Hung](https://github.com/fevemania)(brent12052003@gmail.com), [Jia-Hong Lee](https://github.com/Jia-HongHenryLee)(honghenry.lee@gmail.com), [Timmy S. T. Wan](https://github.com/bigchou)(40347905s@gmail.com), [Chein-Hung Chen](https://github.com/Chien-Hung)(redsword26@gmail.com), [Yi-Ming Chan](https://github.com/yimingchan)(yiming@iis.sinica.edu.tw), Chu-Song Chen(song@iis.sinica.edu.tw)
 
