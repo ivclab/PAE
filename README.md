@@ -153,6 +153,8 @@ $ bash src/add_new_task_script.sh 0 chalearn/gender 3 experiment2/chalearn/gende
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/increasingly-packing-multiple-facial/facial-expression-recognition-on-affectnet)](https://paperswithcode.com/sota/facial-expression-recognition-on-affectnet?p=increasingly-packing-multiple-facial)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/increasingly-packing-multiple-facial/gender-prediction-on-fotw-gender)](https://paperswithcode.com/sota/gender-prediction-on-fotw-gender?p=increasingly-packing-multiple-facial)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/increasingly-packing-multiple-facial/face-verification-on-labeled-faces-in-the)](https://paperswithcode.com/sota/face-verification-on-labeled-faces-in-the?p=increasingly-packing-multiple-facial)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/increasingly-packing-multiple-facial/age-and-gender-classification-on-adience-age)](https://paperswithcode.com/sota/age-and-gender-classification-on-adience-age?p=increasingly-packing-multiple-facial)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/increasingly-packing-multiple-facial/age-and-gender-classification-on-adience)](https://paperswithcode.com/sota/age-and-gender-classification-on-adience?p=increasingly-packing-multiple-facial)
 
 ## [Compacting, Picking and Growing (CPG)](https://github.com/ivclab/CPG)
 We enhance our PAE to become the CPG, which is published in NeurIPS, 2019.
