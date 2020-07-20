@@ -149,6 +149,10 @@ $ bash src/experiment2_PAE.sh
 # <pretrained_model>: the directory path which the previous task's model are stored in. Please refer the csv file to select the best accuracy of the previous task's model.
 $ bash src/add_new_task_script.sh 0 chalearn/gender 3 experiment2/chalearn/gender/expand pae_checkpoint/experiment2/emotion/weighted_loss/model-.ckpt-86
 ```
+## Benchmarks
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/increasingly-packing-multiple-facial/facial-expression-recognition-on-affectnet)](https://paperswithcode.com/sota/facial-expression-recognition-on-affectnet?p=increasingly-packing-multiple-facial)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/increasingly-packing-multiple-facial/gender-prediction-on-fotw-gender)](https://paperswithcode.com/sota/gender-prediction-on-fotw-gender?p=increasingly-packing-multiple-facial)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/increasingly-packing-multiple-facial/face-verification-on-labeled-faces-in-the)](https://paperswithcode.com/sota/face-verification-on-labeled-faces-in-the?p=increasingly-packing-multiple-facial)
 
 ## [Compacting, Picking and Growing (CPG)](https://github.com/ivclab/CPG)
 We enhance our PAE to become the CPG, which is published in NeurIPS, 2019.
