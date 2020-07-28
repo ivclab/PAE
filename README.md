@@ -79,10 +79,7 @@ $ python download_aligned_Adienceage.py
 $ python download_aligned_Adiencegender.py
 ```
 
-2. Download all epoches of PAENet models and baseline models in all experiment (The file size of official_checkpoint.zip is 79 GB)
-```bash
-$ python download_official_checkpoint.py
-```
+2. Download all epoches of PAENet models and baseline models in all experiment (The file size of [official_checkpoint.zip](https://drive.google.com/file/d/1qTQBvvCduzEI6tMpnhopBBgB61kMCoZg/view?usp=sharing) is 79 GB)
 
 3. Inference the PAENet model
 - inference the face task of PAENet model and its accuracy and model size stored in [accresult/experiment1/PAENet_face](https://github.com/ivclab/PAE/blob/master/accresult/experiment1/PAENet_face.csv). The accuracy and model size of baseline FaceNet stored in [accresult/baseline/experiment1/FaceNet](https://github.com/ivclab/PAE/blob/master/accresult/baseline/experiment1/FaceNet.csv).
@@ -113,10 +110,7 @@ $ python download_aligned_chalearn.py
 $ python download_aligned_affectnet.py
 ```
 
-2. Download all epoches of PAENet models and baseline models in all experiment (The file size of official_checkpoint.zip is 79 GB)
-```bash
-$ python download_official_checkpoint.py
-```
+2. Download all epoches of PAENet models and baseline models in all experiment (The file size of [official_checkpoint.zip](https://drive.google.com/file/d/1qTQBvvCduzEI6tMpnhopBBgB61kMCoZg/view?usp=sharing) is 79 GB)
 
 3. Inference the PAENet model
 - inference the face task of PAENet model and its accuracy and model size stored in [accresult/experiment2/PAENet_face](https://github.com/ivclab/PAE/blob/master/accresult/experiment2/PAENet_face.csv). The accuracy and model size of baseline FaceNet stored in [accresult/baseline/experiment2/FaceNet](https://github.com/ivclab/PAE/blob/master/accresult/baseline/experiment2/FaceNet.csv).
