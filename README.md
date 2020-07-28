@@ -71,13 +71,12 @@ $ git clone --recursive https://github.com/ivclab/PAE.git
 ```
 
 ### Experiment One (Face Verification, Gender and Age Modules)
-1. Download Vggface2(image size is 182x182 and its file size is 148 GB), LFW(image size is 160x160) and Adience(image size is 182x182) datasets which have been aligned by [MTCNN](https://github.com/ivclab/PAE/tree/master/src/align)
+1. Download [Vggface2](https://drive.google.com/file/d/1rSvFgSOO5kG2LO2jfVkkgP3s-NRgwE4d/view?usp=sharing)(image size is 182x182 and its file size is 148 GB), LFW(image size is 160x160) and Adience(image size is 182x182) datasets which have been aligned by [MTCNN](https://github.com/ivclab/PAE/tree/master/src/align)
 ```bash
 $ cd data
 $ python download_aligned_LFW.py
 $ python download_aligned_Adienceage.py
 $ python download_aligned_Adiencegender.py
-$ python download_aligned_vggface2.py
 ```
 
 2. Download all epoches of PAENet models and baseline models in all experiment (The file size of official_checkpoint.zip is 79 GB)
@@ -106,11 +105,10 @@ $ bash src/experiment1_PAE.sh
 ```
 
 ### Experiment Two (Face Verification, Expression and Gender)
-1. Download Vggface2(image size is 182x182 and its file size is 148 GB), LFW(image size is 160x160), AffectNet(image size is 182x182) and FotW/Chalearn(its training data is mixed with IMDb-Wiki dataset and its image size is 182x182) datasets which have been aligned by [MTCNN](https://github.com/ivclab/PAE/tree/master/src/align)
+1. Download [Vggface2](https://drive.google.com/file/d/1rSvFgSOO5kG2LO2jfVkkgP3s-NRgwE4d/view?usp=sharing)(image size is 182x182 and its file size is 148 GB), LFW(image size is 160x160), AffectNet(image size is 182x182) and FotW/Chalearn(its training data is mixed with IMDb-Wiki dataset and its image size is 182x182) datasets which have been aligned by [MTCNN](https://github.com/ivclab/PAE/tree/master/src/align)
 ```bash
 $ cd data
 $ python download_aligned_LFW.py
-$ python download_aligned_vggface2.py
 $ python download_aligned_chalearn.py
 $ python download_aligned_affectnet.py
 ```
