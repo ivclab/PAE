@@ -3,7 +3,15 @@ official implementation of [Increasingly Packing Multiple Facial-Informatics Mod
 
 Created by [Steven C. Y. Hung](https://github.com/fevemania), [Jia-Hong Lee](https://github.com/Jia-HongHenryLee), [Timmy S. T. Wan](https://github.com/bigchou), [Chein-Hung Chen](https://github.com/Chien-Hung), [Yi-Ming Chan](https://github.com/yimingchan), Chu-Song Chen
 
-The code is released for academic research use only. For commercial use, please contact [Dr. Chu-Song Chen](https://www.iis.sinica.edu.tw/pages/song/)(song@iis.sinica.edu.tw).
+The code is released for academic research use only. For commercial use, please contact Prof. Chu-Song Chen(chusong@csie.ntu.edu.tw).
+
+## Benchmarks
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/increasingly-packing-multiple-facial/facial-expression-recognition-on-affectnet)](https://paperswithcode.com/sota/facial-expression-recognition-on-affectnet?p=increasingly-packing-multiple-facial)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/increasingly-packing-multiple-facial/gender-prediction-on-fotw-gender)](https://paperswithcode.com/sota/gender-prediction-on-fotw-gender?p=increasingly-packing-multiple-facial)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/increasingly-packing-multiple-facial/face-verification-on-labeled-faces-in-the)](https://paperswithcode.com/sota/face-verification-on-labeled-faces-in-the?p=increasingly-packing-multiple-facial)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/increasingly-packing-multiple-facial/age-and-gender-classification-on-adience-age)](https://paperswithcode.com/sota/age-and-gender-classification-on-adience-age?p=increasingly-packing-multiple-facial)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/increasingly-packing-multiple-facial/age-and-gender-classification-on-adience)](https://paperswithcode.com/sota/age-and-gender-classification-on-adience?p=increasingly-packing-multiple-facial)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/increasingly-packing-multiple-facial/continual-learning-on-cifar100-20-tasks)](https://paperswithcode.com/sota/continual-learning-on-cifar100-20-tasks?p=increasingly-packing-multiple-facial)
 
 ## Introduction
 Simultaneously running multiple modules is a key requirement for a smart multimedia system for facial applications including face recognition, facial expression understanding, and gender identification. To effectively integrate them, a continual learning approach to learn new tasks without forgetting is introduced. Unlike previous methods growing monotonically in size, our approach maintains the compactness in continual learning. The proposed packing-and-expanding method is effective and easy to implement, which can iteratively shrink and enlarge the model to integrate new functions. Our integrated multitask model can achieve similar accuracy with only 39.9% of the original size.
@@ -141,13 +149,6 @@ $ bash src/experiment2_PAE.sh
 # <pretrained_model>: the directory path which the previous task's model are stored in. Please refer the csv file to select the best accuracy of the previous task's model.
 $ bash src/add_new_task_script.sh 0 chalearn/gender 3 experiment2/chalearn/gender/expand pae_checkpoint/experiment2/emotion/weighted_loss/model-.ckpt-86
 ```
-## Benchmarks
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/increasingly-packing-multiple-facial/facial-expression-recognition-on-affectnet)](https://paperswithcode.com/sota/facial-expression-recognition-on-affectnet?p=increasingly-packing-multiple-facial)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/increasingly-packing-multiple-facial/gender-prediction-on-fotw-gender)](https://paperswithcode.com/sota/gender-prediction-on-fotw-gender?p=increasingly-packing-multiple-facial)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/increasingly-packing-multiple-facial/face-verification-on-labeled-faces-in-the)](https://paperswithcode.com/sota/face-verification-on-labeled-faces-in-the?p=increasingly-packing-multiple-facial)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/increasingly-packing-multiple-facial/age-and-gender-classification-on-adience-age)](https://paperswithcode.com/sota/age-and-gender-classification-on-adience-age?p=increasingly-packing-multiple-facial)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/increasingly-packing-multiple-facial/age-and-gender-classification-on-adience)](https://paperswithcode.com/sota/age-and-gender-classification-on-adience?p=increasingly-packing-multiple-facial)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/increasingly-packing-multiple-facial/continual-learning-on-cifar100-20-tasks)](https://paperswithcode.com/sota/continual-learning-on-cifar100-20-tasks?p=increasingly-packing-multiple-facial)
 
 ## [Compacting, Picking and Growing (CPG)](https://github.com/ivclab/CPG)
 We enhance our PAE to become the CPG, which is published in NeurIPS, 2019.
@@ -156,5 +157,5 @@ We enhance our PAE to become the CPG, which is published in NeurIPS, 2019.
 - [FaceNet](https://github.com/davidsandberg/facenet)
 
 ## Contact
-Please feel free to leave suggestions or comments to [Steven C. Y. Hung](https://github.com/fevemania)(brent12052003@gmail.com), [Jia-Hong Lee](https://github.com/Jia-HongHenryLee)(honghenry.lee@gmail.com), [Timmy S. T. Wan](https://github.com/bigchou)(40347905s@gmail.com), [Chein-Hung Chen](https://github.com/Chien-Hung)(redsword26@gmail.com), [Yi-Ming Chan](https://github.com/yimingchan)(yiming@iis.sinica.edu.tw), [Chu-Song Chen](https://www.iis.sinica.edu.tw/pages/song/)(song@iis.sinica.edu.tw)
+Please feel free to leave suggestions or comments to [Steven C. Y. Hung](https://github.com/fevemania)(brent12052003@gmail.com), [Jia-Hong Lee](https://github.com/Jia-HongHenryLee)(honghenry.lee@gmail.com), [Timmy S. T. Wan](https://github.com/bigchou)(40347905s@gmail.com), [Chein-Hung Chen](https://github.com/Chien-Hung)(redsword26@gmail.com), [Yi-Ming Chan](https://github.com/yimingchan)(yiming@iis.sinica.edu.tw), Chu-Song Chen(chusong@csie.ntu.edu.tw)
 
